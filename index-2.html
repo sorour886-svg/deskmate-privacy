@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سياسة الخصوصية — DeskMate | Privacy Policy</title>
+<meta name="description" content="سياسة الخصوصية لتطبيق DeskMate. Privacy policy for the DeskMate app.">
+<script>
+  // اللغة: من الرابط (#en / #ar)، وإلا من لغة المتصفح (العربية افتراضياً)
+  (function () {
+    var h = (location.hash || '').replace('#', '');
+    var l = (h === 'en' || h === 'ar') ? h : ((navigator.language || 'ar').toLowerCase().indexOf('ar') === 0 ? 'ar' : 'en');
+    var d = document.documentElement;
+    d.lang = l; d.dir = l === 'ar' ? 'rtl' : 'ltr';
+  })();
+</script>
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --surface: #ffffff;
+    --ink: #1d1b26;
+    --muted: #5d5a6b;
+    --line: #e3e0ea;
+    --accent: #4a3fb0;
+    --accent-soft: #eeecfa;
+    --mark: #fff3c9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14131a;
+      --surface: #1c1b24;
+      --ink: #ecebf2;
+      --muted: #a9a6b8;
+      --line: #2e2c3a;
+      --accent: #a79df5;
+      --accent-soft: #25223a;
+      --mark: #3a3320;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, "Noto Sans Arabic", "Noto Naskh Arabic", Tahoma, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.85;
+  }
+  html[lang="ar"] .en { display: none; }
+  html[lang="en"] .ar { display: none; }
+
+  .bar {
+    position: sticky; top: 0; z-index: 5;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-in {
+    max-width: 46rem; margin: 0 auto; padding: .7rem 1.25rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  }
+  .brand { font-weight: 700; letter-spacing: .01em; color: var(--ink); text-decoration: none; }
+  .switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .switch button {
+    border: 0; background: transparent; color: var(--muted);
+    padding: .35rem .95rem; font: inherit; font-size: .9rem; cursor: pointer;
+  }
+  .switch button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .switch button:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 2rem; line-height: 1.3; margin: 0 0 .4rem; }
+  .updated { color: var(--muted); font-size: .92rem; margin: 0 0 2rem; }
+  h2 { font-size: 1.25rem; line-height: 1.4; margin: 2.6rem 0 .6rem; scroll-margin-top: 4.5rem; }
+  p { margin: .6rem 0; }
+  ul { padding-inline-start: 1.4rem; margin: .6rem 0; }
+  li { margin: .35rem 0; }
+  a { color: var(--accent); }
+
+  .summary {
+    background: var(--accent-soft);
+    border-inline-start: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 0 0 1.5rem;
+  }
+  .summary p { margin: .3rem 0; }
+
+  nav.toc { margin: 0 0 1rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  nav.toc ol { margin: 0; padding-inline-start: 1.4rem; columns: 2; column-gap: 2rem; font-size: .95rem; }
+  nav.toc li { margin: .15rem 0; break-inside: avoid; }
+  @media (max-width: 34rem) { nav.toc ol { columns: 1; } }
+
+  .tablewrap { overflow-x: auto; margin: 1rem 0; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: .93rem; line-height: 1.6; }
+  th, td { padding: .65rem .8rem; text-align: start; vertical-align: top; border-bottom: 1px solid var(--line); }
+  th { background: var(--accent-soft); font-weight: 700; }
+  tr:last-child td { border-bottom: 0; }
+
+  .contact {
+    margin-top: 2rem; padding: 1rem 1.25rem; border: 1px solid var(--line);
+    border-radius: 6px; background: var(--surface);
+  }
+  footer { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(--muted); font-size: .88rem; }
+  bdi, .ltr { unicode-bidi: isolate; direction: ltr; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+<noscript><style>html .en { display: block !important; } html .ar { display: block !important; }</style></noscript>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="#top">DeskMate</a>
+    <div class="switch" role="group" aria-label="Language / اللغة">
+      <button type="button" id="b-ar" aria-pressed="true">العربية</button>
+      <button type="button" id="b-en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= العربية ======================= -->
+<main id="top" class="ar" lang="ar" dir="rtl">
+  <h1>سياسة الخصوصية — DeskMate</h1>
+  <p class="updated">آخر تحديث: 28 أكتوبر 2026</p>
+
+  <div class="summary">
+    <p><strong>باختصار:</strong> DeskMate تطبيق إنتاجية شخصي تبقى بياناتك فيه على جهازك. لا يحتاج حساباً، ولا يرسل مهامك أو ملاحظاتك أو بياناتك المالية إلى المطوّر أو إلى أي خادم تابع له، ولا نجمع تحليلات استخدام. التطبيق مجاني ويعرض إعلانات عبر Google AdMob، وهذه الخدمة تجمع بعض البيانات كما هو موضّح أدناه.</p>
+  </div>
+
+  <nav class="toc" aria-label="المحتويات">
+    <ol>
+      <li><a href="#a1">البيانات التي يحفظها التطبيق</a></li>
+      <li><a href="#a2">ملخص الخدمات الخارجية</a></li>
+      <li><a href="#a3">الإعلانات والموافقة</a></li>
+      <li><a href="#a4">الطقس والموقع التقريبي</a></li>
+      <li><a href="#a5">أسعار العملات</a></li>
+      <li><a href="#a6">الإشعارات والتنبيهات</a></li>
+      <li><a href="#a7">النسخ الاحتياطي اليدوي</a></li>
+      <li><a href="#a8">الأمان</a></li>
+      <li><a href="#a9">خدمات Google Play</a></li>
+      <li><a href="#a10">الأطفال</a></li>
+      <li><a href="#a11">خياراتك وحذف بياناتك</a></li>
+      <li><a href="#a12">التغييرات على هذه السياسة</a></li>
+      <li><a href="#a13">التواصل</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="a1">البيانات التي يحفظها التطبيق</h2>
+  <p>المهام، الأهداف، الملاحظات، المواعيد، العادات، الدورات، المعاملات المالية، إعداداتك (اللغة، المظهر، اللون، الإشعارات)، واسمك وصورتك الشخصية إن أضفتهما. كل ذلك يُخزَّن محلياً داخل مساحة التطبيق الخاصة على جهازك فقط، ولا نملك نسخة منه.</p>
+  <p>لا نبيع ما تُدخله في التطبيق ولا نشاركه مع أحد، ولا توجد مزامنة سحابية، ولا يمرّر التطبيق هذه البيانات إلى الإعلانات.</p>
+  <p>الصورة الشخصية، عند اختيارها، تُنسخ إلى مساحة التطبيق الخاصة ولا تُرفع إلى أي مكان، وتُحذف عند استبدالها أو إزالتها.</p>
+
+  <h2 id="a2">ملخص الخدمات الخارجية</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>الخدمة</th><th>الغرض</th><th>ما تتلقاه</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google AdMob<br>(وUMP لإدارة الموافقة)</td>
+          <td>عرض الإعلانات وقياس أدائها ومنع الاحتيال</td>
+          <td>معرّف الإعلانات، عنوان IP، معلومات الجهاز، التفاعل مع الإعلانات</td>
+        </tr>
+        <tr>
+          <td>Open-Meteo</td>
+          <td>عرض الطقس</td>
+          <td>إحداثيات المدينة التي اخترتها أو موقعك التقريبي (إن سمحت)، وعنوان IP</td>
+        </tr>
+        <tr>
+          <td>ExchangeRate-API</td>
+          <td>أسعار الصرف في محوّل العملات</td>
+          <td>عنوان IP فقط (لا يُرسل إليها شيء من بياناتك)</td>
+        </tr>
+        <tr>
+          <td>Google Play</td>
+          <td>نافذة التقييم والتحديث (عند التثبيت من Google Play)</td>
+          <td>تُدار من Google وفق سياستها</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="a3">الإعلانات والموافقة</h2>
+  <p>التطبيق مجاني ويعرض إعلانات عبر Google AdMob في بعض الأقسام: إعلانات شريطية أسفل الشاشة، وإعلانات مدمجة بين عناصر بعض القوائم (تُميَّز دائماً بكلمة «إعلان»)، وإعلان قصير عند فتح التطبيق أحياناً (وليس في كل مرة)، وإعلان بيني أحياناً بعد إنهاء جلسة تركيز.</p>
+  <p>لعرض الإعلانات وقياس أدائها ومنع الاحتيال، قد تجمع Google وشركاؤها بيانات مثل معرّف الإعلانات (Advertising ID) وعنوان IP ومعلومات الجهاز وتفاعلك مع الإعلانات، وقد تعرض إعلانات مخصّصة بحسب موافقتك حيث يشترط القانون ذلك (مثل المنطقة الاقتصادية الأوروبية والمملكة المتحدة). يعرض التطبيق نموذج موافقة من Google (UMP) عند الحاجة.</p>
+  <p>يمكنك:</p>
+  <ul>
+    <li>تغيير اختيارك من «خيارات الخصوصية» في إعدادات التطبيق حين تظهر.</li>
+    <li>إعادة ضبط معرّف الإعلانات أو إيقاف تخصيص الإعلانات من إعدادات جهازك (Google ← الإعلانات).</li>
+  </ul>
+  <p>للمزيد عن كيفية استخدام Google للبيانات: <a href="https://policies.google.com/technologies/ads" rel="noopener">سياسة الإعلانات من Google</a> و<a href="https://policies.google.com/privacy" rel="noopener">سياسة خصوصية Google</a>.</p>
+
+  <h2 id="a4">الطقس والموقع التقريبي</h2>
+  <p>لعرض الطقس يتصل التطبيق بخدمة Open-Meteo المجانية ويرسل إليها إحداثيات المدينة التي اخترتها، أو إحداثيات موقعك <strong>التقريبي</strong> الحالي إذا ضغطت «استخدام موقعي» ووافقت على إذن الموقع التقريبي. تتلقى الخدمة بطبيعة الاتصال عنوان IP الخاص بك وتخضع <a href="https://open-meteo.com/en/terms" rel="noopener">لشروطها وسياستها</a>.</p>
+  <p>لا نحفظ إحداثياتك؛ نحفظ فقط آخر نتيجة طقس واسم المكان على جهازك لعرضها عند انقطاع الإنترنت. إذن الموقع اختياري، ويمكنك اختيار مدينة يدوياً دون منحه.</p>
+
+  <h2 id="a5">أسعار العملات</h2>
+  <p>عند استخدام محوّل العملات يتصل التطبيق بخدمة ExchangeRate-API (‏<bdi>open.er-api.com</bdi>) لجلب أسعار الصرف. لا يُرسل إليها أي شيء من بياناتك، لكنها تتلقى عنوان IP الخاص بك بطبيعة الاتصال وتخضع <a href="https://www.exchangerate-api.com/terms" rel="noopener">لشروطها</a>. نحفظ آخر أسعار على جهازك لعرضها عند انقطاع الإنترنت.</p>
+
+  <h2 id="a6">الإشعارات والتنبيهات</h2>
+  <p>إشعارات الأذكار والتحفيز وتذكيرات المهام تُجدوَل محلياً على جهازك ولا تمرّ عبر أي خادم. إذن الإشعارات اختياري. يستخدم التطبيق إذن التنبيهات الدقيقة وإذن بدء التشغيل بعد إعادة تشغيل الجهاز فقط ليصل التذكير في موعده ويُعاد جدولته بعد إعادة التشغيل. كما يستخدم إذن الاهتزاز للتنبيهات.</p>
+
+  <h2 id="a7">النسخ الاحتياطي اليدوي</h2>
+  <p>يمكنك تصدير نسخة من بياناتك إلى ملف (<bdi>.deskmate</bdi>) تحفظه أنت في المكان الذي تختاره، واستيرادها لاحقاً. الملف محمي بالتعتيم وليس بتشفير قوي، فاحفظه في مكان آمن ولا ترسله لمن لا تثق به. لا نرفع هذه الملفات إلى أي مكان. والتطبيق مستبعد من النسخ الاحتياطي التلقائي لنظام أندرويد.</p>
+
+  <h2 id="a8">الأمان</h2>
+  <p>بياناتك محمية ببيئة العزل الخاصة بنظام أندرويد، لكنها غير مشفّرة بطبقة إضافية من التطبيق. لذلك ننصحك بتفعيل قفل الشاشة على جهازك، ويمكنك أيضاً تفعيل قفل التطبيق من الإعدادات.</p>
+
+  <h2 id="a9">خدمات Google Play</h2>
+  <p>إذا ثبّتّ التطبيق من Google Play فقد يطلب التطبيق من Google Play عرض نافذة تقييم أو تحديث. هذه النوافذ تُدار بالكامل من Google وفق سياستها، ولا يتلقى التطبيق منها بياناتك.</p>
+
+  <h2 id="a10">الأطفال</h2>
+  <p>التطبيق غير موجّه للأطفال دون 13 عاماً، ولا نجمع عمداً بيانات شخصية منهم. إن كنت ولي أمر وتعتقد أن طفلك استخدم التطبيق بطريقة تحتاج إلى مراجعة، فراسلنا على البريد أدناه.</p>
+
+  <h2 id="a11">خياراتك وحذف بياناتك</h2>
+  <ul>
+    <li>يمكنك حذف أي عنصر من داخل التطبيق.</li>
+    <li>يمكنك حذف كل شيء بمسح بيانات التطبيق من إعدادات الجهاز أو بإلغاء تثبيته.</li>
+    <li>لا نملك نسخة من بياناتك ولا يمكننا استعادتها لك.</li>
+    <li>بياناتك لدى الخدمات الخارجية المذكورة أعلاه (مثل Google) تخضع لسياساتها، وتستطيع ممارسة حقوقك معها مباشرة.</li>
+  </ul>
+
+  <h2 id="a12">التغييرات على هذه السياسة</h2>
+  <p>إذا تغيّر ما يفعله التطبيق ببياناتك سنحدّث هذه الصفحة ونغيّر تاريخ آخر تحديث أعلاها.</p>
+
+  <h2 id="a13">التواصل</h2>
+  <div class="contact">
+    <p>المطوّران: أحمد سرور وحماده سرور</p>
+    <p>للاستفسار عن الخصوصية: <a class="ltr" href="mailto:sorour10100@gmail.com">sorour10100@gmail.com</a></p>
+  </div>
+</main>
+
+<!-- ======================= English ======================= -->
+<main class="en" lang="en" dir="ltr">
+  <h1>DeskMate Privacy Policy</h1>
+  <p class="updated">Last updated: October 28, 2026</p>
+
+  <div class="summary">
+    <p><strong>In short:</strong> DeskMate is a personal productivity app and your data stays on your device. It needs no account, does not send your tasks, notes or financial entries to the developer or to any server of ours, and we collect no usage analytics. The app is free and shows ads through Google AdMob, which collects some data as described below.</p>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#e1">Data the app stores</a></li>
+      <li><a href="#e2">Third-party services at a glance</a></li>
+      <li><a href="#e3">Ads and consent</a></li>
+      <li><a href="#e4">Weather and approximate location</a></li>
+      <li><a href="#e5">Exchange rates</a></li>
+      <li><a href="#e6">Notifications and alarms</a></li>
+      <li><a href="#e7">Manual backups</a></li>
+      <li><a href="#e8">Security</a></li>
+      <li><a href="#e9">Google Play services</a></li>
+      <li><a href="#e10">Children</a></li>
+      <li><a href="#e11">Your choices and deleting your data</a></li>
+      <li><a href="#e12">Changes to this policy</a></li>
+      <li><a href="#e13">Contact</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="e1">Data the app stores</h2>
+  <p>Tasks, goals, notes, appointments, habits, courses, financial entries, your settings (language, theme, color, notifications), and your name and profile photo if you add them. All of it is stored locally in the app's private storage on your device only, and we hold no copy.</p>
+  <p>We don't sell or share what you enter in the app, there is no cloud sync, and the app does not pass this data to ads.</p>
+  <p>If you choose a profile photo, it is copied to the app's private storage and is not uploaded anywhere. It is deleted when you replace or remove it.</p>
+
+  <h2 id="e2">Third-party services at a glance</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Service</th><th>Purpose</th><th>What it receives</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google AdMob<br>(and UMP for consent)</td>
+          <td>Showing ads, measuring performance, preventing fraud</td>
+          <td>Advertising ID, IP address, device information, interaction with ads</td>
+        </tr>
+        <tr>
+          <td>Open-Meteo</td>
+          <td>Showing weather</td>
+          <td>Coordinates of the city you picked, or your approximate location (if you allow it), and your IP address</td>
+        </tr>
+        <tr>
+          <td>ExchangeRate-API</td>
+          <td>Exchange rates in the currency converter</td>
+          <td>Your IP address only (none of your data is sent)</td>
+        </tr>
+        <tr>
+          <td>Google Play</td>
+          <td>Rating and update prompts (when installed from Google Play)</td>
+          <td>Handled by Google under its own policy</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="e3">Ads and consent</h2>
+  <p>The app is free and shows ads through Google AdMob in some sections: banners at the bottom of the screen, native ads between the items of some lists (always labelled "Ad"), an occasional short ad when the app opens (not every time), and an occasional interstitial ad after you finish a focus session.</p>
+  <p>To serve ads, measure performance and prevent fraud, Google and its partners may collect data such as the Advertising ID, IP address, device information and your interaction with ads, and may show personalized ads based on your consent where the law requires it (for example in the European Economic Area and the United Kingdom). The app shows a Google consent form (UMP) when it is needed.</p>
+  <p>You can:</p>
+  <ul>
+    <li>Change your choice from "Privacy options" in the app's Settings when it is shown.</li>
+    <li>Reset your Advertising ID or turn off ad personalization in your device settings (Google &gt; Ads).</li>
+  </ul>
+  <p>To learn more about how Google uses data: <a href="https://policies.google.com/technologies/ads" rel="noopener">Google's advertising policy</a> and <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</p>
+
+  <h2 id="e4">Weather and approximate location</h2>
+  <p>To show weather, the app contacts the free Open-Meteo service and sends it the coordinates of the city you picked, or of your <strong>approximate</strong> current location if you tap "Use my location" and grant the approximate-location permission. By the nature of the connection the service receives your IP address and is governed by <a href="https://open-meteo.com/en/terms" rel="noopener">its own terms and policy</a>.</p>
+  <p>We don't store your coordinates; we only keep the last weather result and the place name on your device to show when you're offline. Location permission is optional, and you can pick a city manually without granting it.</p>
+
+  <h2 id="e5">Exchange rates</h2>
+  <p>When you use the currency converter, the app contacts the ExchangeRate-API service (<bdi>open.er-api.com</bdi>) to fetch exchange rates. Nothing from your data is sent to it, but by the nature of the connection it receives your IP address and is governed by <a href="https://www.exchangerate-api.com/terms" rel="noopener">its own terms</a>. We keep the last rates on your device to show them when you're offline.</p>
+
+  <h2 id="e6">Notifications and alarms</h2>
+  <p>Supplication, motivational and task-reminder notifications are scheduled locally on your device and never pass through a server. Notification permission is optional. The app uses the exact-alarm permission and the permission to start after a device restart only so reminders arrive on time and are rescheduled after a restart. It also uses the vibration permission for alerts.</p>
+
+  <h2 id="e7">Manual backups</h2>
+  <p>You can export a copy of your data to a file (<bdi>.deskmate</bdi>) that you save wherever you choose, and import it later. The file is obfuscated, not strongly encrypted, so keep it somewhere safe and don't send it to anyone you don't trust. We never upload these files anywhere. The app is also excluded from Android's automatic backups.</p>
+
+  <h2 id="e8">Security</h2>
+  <p>Your data is protected by Android's app sandbox but is not additionally encrypted by the app, so we recommend enabling a screen lock on your device. You can also turn on the app lock in Settings.</p>
+
+  <h2 id="e9">Google Play services</h2>
+  <p>If you installed the app from Google Play, the app may ask Google Play to show a rating or an update prompt. These prompts are handled entirely by Google under its own policy, and the app does not receive your data from them.</p>
+
+  <h2 id="e10">Children</h2>
+  <p>The app is not directed to children under 13, and we do not knowingly collect personal data from them. If you are a parent or guardian and believe your child has used the app in a way that needs review, email us at the address below.</p>
+
+  <h2 id="e11">Your choices and deleting your data</h2>
+  <ul>
+    <li>You can delete any item inside the app.</li>
+    <li>You can delete everything by clearing the app's data in your device settings or by uninstalling it.</li>
+    <li>We hold no copy of your data and cannot restore it for you.</li>
+    <li>Data held by the third-party services above (such as Google) is governed by their policies, and you can exercise your rights with them directly.</li>
+  </ul>
+
+  <h2 id="e12">Changes to this policy</h2>
+  <p>If what the app does with your data changes, we will update this page and the last-updated date at the top.</p>
+
+  <h2 id="e13">Contact</h2>
+  <div class="contact">
+    <p>Developers: Ahmed Sorour and Hamada Sorour</p>
+    <p>Privacy questions: <a class="ltr" href="mailto:sorour10100@gmail.com">sorour10100@gmail.com</a></p>
+  </div>
+</main>
+
+<footer>© DeskMate</footer>
+
+<script>
+  (function () {
+    var d = document.documentElement;
+    var bAr = document.getElementById('b-ar'), bEn = document.getElementById('b-en');
+    function set(l) {
+      d.lang = l; d.dir = l === 'ar' ? 'rtl' : 'ltr';
+      bAr.setAttribute('aria-pressed', l === 'ar');
+      bEn.setAttribute('aria-pressed', l === 'en');
+      document.title = l === 'ar' ? 'سياسة الخصوصية — DeskMate' : 'DeskMate Privacy Policy';
+      try { history.replaceState(null, '', '#' + l); } catch (e) {}
+      window.scrollTo(0, 0);
+    }
+    bAr.addEventListener('click', function () { set('ar'); });
+    bEn.addEventListener('click', function () { set('en'); });
+    var cur = d.lang;
+    bAr.setAttribute('aria-pressed', cur === 'ar');
+    bEn.setAttribute('aria-pressed', cur === 'en');
+    document.title = cur === 'ar' ? 'سياسة الخصوصية — DeskMate' : 'DeskMate Privacy Policy';
+  })();
+</script>
+</body>
+</html>
